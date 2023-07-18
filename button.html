@@ -10,10 +10,10 @@
     <div class="contsiner w-50 m-5">
         <div class="row">
             <div class="col-4">
-                <button class="btn btn-danger w-100 " id="hover">MouseHover</button>
+                <button class="btn btn-danger w-100 " id="over">MouseHover</button>
             </div>
             <div class="col-4">
-                <button class="btn btn-danger w-100" id=" mout">Mouse Out</button>
+                <button class="btn btn-danger w-100" id="mout">Mouse Out</button>
             </div>
             <div class="col-4">
                 <button class="btn btn-danger w-100 " id="ondbl">ondbClick</button>
@@ -32,27 +32,35 @@
         </div>
     </div>
     <script>
-      document.getElementById("hover").addEventListener("mouseover", ()=> {
-      document.getElementById("hover").style.backgroundColor = "green";
+      document.getElementById("over").addEventListener("mouseover", ()=> {
+      document.getElementById("over").style.backgroundColor = "green";
       });
 
 
-      document.getElementById("hover").addEventListener("mouseout", ()=> {
-      document.getElementById("hover").style.backgroundColor = "pink";
+      document.getElementById("over").addEventListener("mouseout", ()=> {
+      document.getElementById("over").style.backgroundColor = "pink";
       });
-
-      document.getElementById("mout").addEventListener("mouseleav", ()=> {
-      document.getElementById("mout").style.backgroundColor = "green";
-      });
-      
-      document.getElementById("ondbl").addEventListener("ondblclick", ()=> {
-      document.getElementById("ondbl").style.backgroundColor = "blue";
-      });
-      
-      document.getElementById("mouseclick").addEventListener("click", ()=> {
-      document.getElementById("mouseclick").style.backgroundColor = "blue";
-      });
-      
+     
+      document.getElementById("ondbl").addEventListener('dblclick',()=>{
+        document.getElementById("ondbl").style.backgroundColor="yellow"
+      })
+      document.getElementById("ondbl").addEventListener('mouseout',()=>{
+        document.getElementById("ondbl").style.backgroundColor="red"
+      })
+      document.getElementById("mouseclick").addEventListener('click',()=>{
+        document.getElementById("mouseclick").style.backgroundColor="blue"
+      })
+      document.getElementById("onblr").addEventListener('blur',()=>{
+        document.getElementById("onblr").style.backgroundColor="grey"
+      })
+      document.getElementById("onfocus").addEventListener('focus',()=>{
+        document.getElementById("onfocus").style.backgroundColor="aqua"
+      })
+      document.getElementById("mout").addEventListener('mouseout',()=>{
+        document.getElementById("mout").style.backgroundColor="orange"
+      })
+    
+    
     
     </script>
     
